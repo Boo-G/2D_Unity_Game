@@ -9,8 +9,9 @@ public class PlayerAttackScript : MonoBehaviour
     [SerializeField] private GameObject[] fireballs;
     private Animator animate;
     private PlayerMovementScript playerMovement ;
-    private float cooldownTimer = Mathf.Infinity; // make it so that the timer doesnts start at zero
+    private float cooldownTimer = Mathf.Infinity; // make it so that the timer doesnts start at zero 
 
+    // test
 
     // Start is called before the first frame update
     void Start()
