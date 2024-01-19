@@ -11,7 +11,7 @@ public class PlayerAttackScript : MonoBehaviour
     private PlayerMovementScript playerMovement ;
     private float cooldownTimer = Mathf.Infinity; // make it so that the timer doesnts start at zero 
 
-    // test
+    // new test
 
     // Start is called before the first frame update
     void Start()
