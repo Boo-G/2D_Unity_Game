@@ -927,10 +927,10 @@ TextureImporter:
       name: bush-leaf3
       rect:
         serializedVersion: 2
-        x: 144
-        y: 32
-        width: 32
-        height: 32
+        x: 145
+        y: 33
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1112,6 +1112,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: wall-right
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 97
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942585935095934418e9bbf69e343a5e
+      internalID: -33905580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-left
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248c8878e5297b24fbb26e7cee6e5c80
+      internalID: 557660769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1172,6 +1214,8 @@ TextureImporter:
       sign6: 672154549
       tree: 969480065
       vines: -292535174
+      wall-left: 557660769
+      wall-right: -33905580
       water: -1636539700
   spritePackingTag: 
   pSDRemoveMatte: 0
