@@ -13,6 +13,8 @@ public class KingMovementScript : MonoBehaviour
     private BoxCollider2D boxCollider;
     private float wallJumpCooldown;
     private float horizontalInput;
+    
+    private bool doubleJump;
 
     
 
@@ -64,10 +66,10 @@ public class KingMovementScript : MonoBehaviour
 
         // flip the player sprite when moving to the left or right
         if(horizontalInput > 0.01){
-            transform.localScale = new Vector3(1,1,1);
+            transform.localScale = new Vector3(4,4,1);
         }
         else if(horizontalInput < -0.01){
-            transform.localScale = new Vector3(-1,1,1);
+            transform.localScale = new Vector3(-4,4,1);
         }
 
         
@@ -75,10 +77,20 @@ public class KingMovementScript : MonoBehaviour
 
     // Jump function
     private void Jump(){
+
         // regular jump
         if(isGrounded()){
+            doubleJump = true;
             body.velocity = new Vector2(body.velocity.x, jumpPower);
             animate.SetTrigger("jump");
+            wallJumpCooldown = 0;
+        }
+
+        // double jump 
+        else if(doubleJump){
+            body.velocity = new Vector2(body.velocity.x, jumpPower);
+            animate.SetTrigger("jump");
+            doubleJump = false;
         }
 
         // wall jump
@@ -98,6 +110,7 @@ public class KingMovementScript : MonoBehaviour
             wallJumpCooldown = 0;
     
         }
+
 
     }
 
