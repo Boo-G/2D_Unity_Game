@@ -12,13 +12,11 @@ public class Door : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            print(collision.transform.position.x);
-            print(transform.position.x);
             if (collision.transform.position.x < transform.position.x)
                 cam.MoveToNewRoom(nextRoom);
             else
                 cam.MoveToNewRoom(previousRoom);
-                print("ii got alled");
+
         }
     }
 }
