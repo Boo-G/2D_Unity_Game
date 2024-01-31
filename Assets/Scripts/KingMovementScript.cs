@@ -41,7 +41,7 @@ public class KingMovementScript : MonoBehaviour
 
 
         // Wall Jump Logic
-        if (wallJumpCooldown > 0.2f){
+        if (wallJumpCooldown > 0.3f){
 
             body.velocity = new Vector2(horizontalInput*speed, body.velocity.y);
 

@@ -570,9 +570,9 @@ TextureImporter:
       name: ground-edge-left
       rect:
         serializedVersion: 2
-        x: 160
+        x: 161
         y: 96
-        width: 8
+        width: 7
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -593,7 +593,7 @@ TextureImporter:
         serializedVersion: 2
         x: 200
         y: 96
-        width: 8
+        width: 7
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
