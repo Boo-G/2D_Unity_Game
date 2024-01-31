@@ -13,7 +13,7 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
         print(playerHealth.currentHealth); // TODO not sure why this is returning 0, needs to be fixed 
-        totalHealthBar.fillAmount = 5 / 8;
+        totalHealthBar.fillAmount = (5+playerHealth.currentHealth) / 8;
         
     }
 
