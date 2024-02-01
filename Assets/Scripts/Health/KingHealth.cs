@@ -8,11 +8,15 @@ public class KingHealth : MonoBehaviour
 
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set;} // can get from any script but can only set value privately
+    private Animator animate;
+    private bool dead;
+
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = startingHealth;
+        animate = GetComponent<Animator>();
         
     }
 
@@ -31,9 +35,16 @@ public class KingHealth : MonoBehaviour
 
         if(currentHealth > 0){
             // player hurt
+            animate.SetTrigger("hurt");
+            // add iframes
         }
         else{
-            // player dead
+            if (!dead){
+                // player dead
+                animate.SetTrigger("dead");
+                GetComponent<KingMovementScript>().enabled = false;
+                dead = true;
+            }
         }
     }
 }
