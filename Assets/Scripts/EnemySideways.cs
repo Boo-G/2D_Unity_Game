@@ -10,17 +10,23 @@ public class EnemySideways : MonoBehaviour
     private bool movingLeft;
     private float leftEdge;
     private float rightEdge;
+
+    private Animator animate;
     // Start is called before the first frame update
     void Start()
     {
         leftEdge = transform.position.x - movementDistance;
         rightEdge = transform.position.x + movementDistance;
+        animate = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {   
-    
+        if(Input.GetKeyDown(KeyCode.Q)){
+        animate.SetTrigger("dead");
+        }
+
         if(movingLeft){
             // moving left, flip the sprite to face left
             transform.localScale = new Vector3(-4, 4, 1);
